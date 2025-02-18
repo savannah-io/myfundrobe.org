@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { signUpWithVerification } from '../lib/auth';
-import { EmailVerification } from '../components/auth/EmailVerification';
 
 interface FormData {
   firstName: string;
@@ -89,10 +88,8 @@ export function SignUp() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black/60 to-black/40 backdrop-blur-sm p-4">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
-          <EmailVerification 
-            email={formData.email}
-            onVerified={handleVerified}
-          />
+            <p>{formData.email}</p>
+            <button onClick={handleVerified}>Verify</button>
         </div>
       </div>
     );

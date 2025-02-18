@@ -1,1 +1,0 @@
-export { AboutBrand } from './AboutBrand';

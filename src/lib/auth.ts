@@ -51,7 +51,7 @@ export async function signUpWithVerification(email: string, password: string, us
     console.error('Error during signup:', error);
     return {
       success: false,
-      message: error.message || 'An error occurred during signup.'
+      message: (error as Error).message || 'An error occurred during signup.'
     };
   }
 }
