@@ -6,8 +6,6 @@ import { ProgramHero } from './pages/ProgramHero';
 import { ProgramSection } from './pages/ProgramSection';
 import { ProgramProducts } from './pages/ProgramProducts';
 import { InstructorSignIn } from './pages/InstructorSignIn';
-import { SignIn } from './pages/SignIn';
-import { SignUp } from './pages/SignUp';
 import { Welcome } from './pages/Welcome';
 
 export default function App() {
@@ -33,8 +31,6 @@ export default function App() {
         <Route path="/:code/instructorsignin" element={<InstructorSignIn />} />
         <Route path="/:code/:section" element={<ProgramSection />} />
         <Route path="/:code/:section/products" element={<ProgramProducts />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
         <Route path="/welcome" element={<Welcome />} />
       </Routes>
     </Router>
